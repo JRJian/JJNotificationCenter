@@ -158,6 +158,7 @@
 }
 
 - (void)setObserversWithNotificationName:(NSNotificationName)name model:(JJNotificationModel *)model {
+    if (!name||!model) {return;}
     [_lock lock];
     NSMutableArray *models = [self observerModelsWithNotificationName:name];
     if (!models) {
