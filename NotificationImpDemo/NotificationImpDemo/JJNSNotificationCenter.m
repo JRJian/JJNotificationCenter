@@ -28,7 +28,6 @@
 @implementation JJNSNotificationCenter
 
 #pragma mark - Init
-
 - (instancetype)init {
     self = [super init];
     if (self) {
@@ -85,7 +84,6 @@
 }
 
 #pragma mark - Public Actions
-
 - (void)addObserver:(id)observer selector:(SEL)aSelector name:(NSNotificationName)aName object:(id)anObject {
     JJNotificationModel *model = [JJNotificationModel new];
     model.observer = observer;
@@ -143,7 +141,6 @@
 }
 
 #pragma mark - Getter & Setter
-
 - (NSMutableDictionary *)observers {
     if (!_observers) {
         _observers = [NSMutableDictionary dictionary];
